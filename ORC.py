@@ -60,4 +60,5 @@ def OCR(img_path: str):
     img_show(img_path, result)
 
 if __name__ == '__main__':
-    OCR('images/img.jpg')
+    #OCR('images/img.jpg')
+    OCR('cropped_receipt.jpg')
