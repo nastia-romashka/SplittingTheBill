@@ -102,5 +102,5 @@ def OCR(img_path: str, show: bool = False):
 
 
 if __name__ == '__main__':
-    OCR('images/img_2.jpg', show=True)
+    OCR('images/img.jpg', show=True)
 

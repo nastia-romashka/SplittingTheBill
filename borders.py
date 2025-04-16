@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 # нужно установить Tesseract по ссылке:  https://github.com/UB-Mannheim/tesseract/wiki
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'  # укажи свой путь тут
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 def crop_receipt_with_ocr(img_path, output_path='images/cropped_img.jpg'):
     img = cv2.imread(img_path)
