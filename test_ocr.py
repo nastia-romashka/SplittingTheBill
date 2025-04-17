@@ -18,10 +18,10 @@ def extract_receipt_data(image_path):
     _, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)
 
     # Распознавание текста
-    text = pytesseract.image_to_string(thresh, lang='rus+eng')
+    text = pytesseract.image_to_string(thresh, lang='rus')
 
     # Разбиваем текст на строки
-    with open('text_test_ocr.txt','w') as file:
+    with open('text_test_ocr.txt','w', encoding='utf-8') as file:
         file.write(text)
     #
     # with open('text_test_ocr.txt','r') as file:
@@ -53,7 +53,7 @@ def extract_receipt_data(image_path):
 
 
 # Обработка чека
-result = extract_receipt_data('images/img.jpg')
+result = extract_receipt_data('images/img_2.jpg')
 
 # Вывод результатов
 if not result:
